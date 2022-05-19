@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin:0;
+    height:100vh;
+    widows: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(217, 201, 191);
+  }
+
+  a {
+    text-decoration: none;
+  }
+  a::after {
+    text-decoration: none;
+  }
