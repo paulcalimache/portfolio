@@ -4,9 +4,11 @@
     background-image: url(../../assets/wallpaper/POOL_DAY_QUEER_BEAR.jpg);
     background-position: center;
     background-size: cover;
-    padding-top:40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows:min-content min-content;
-    row-gap:40px;
   }
+
+a {
+  margin-top:40px;
+}
