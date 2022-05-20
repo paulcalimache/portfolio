@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
   selector: 'app-contact',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  options: AnimationOptions = {
+    path: '/assets/lottieMail.json',
+
+  };
+  
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }

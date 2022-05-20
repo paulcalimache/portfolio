@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +10,10 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { WorkComponent } from './work/work.component';
 import { AppliComponent } from './home/appli/appli.component';
+
+export function playerFactory() {
+  return player;
+}
 
 @NgModule({
   declarations: [
@@ -20,7 +26,8 @@ import { AppliComponent } from './home/appli/appli.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LottieModule.forRoot({ player: playerFactory })
   ],
   providers: [],
   bootstrap: [AppComponent]
