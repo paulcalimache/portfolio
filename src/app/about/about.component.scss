@@ -1,0 +1,119 @@
+#about {
+    background:white;
+  }
+  .about-image {
+    position:sticky;
+    top:0;
+    width:100%;
+    padding-top:20px;
+    z-index:0;
+  }
+  #about-body {
+    position: relative;
+    background:white;
+    border-radius:20px 20px 0 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    width:100%;
+    padding-top:10px;
+    z-index:1;
+  }
+  .about-name {
+    margin-left:20px;
+  }
+  .name {
+    color:black;
+    display:block;
+    font-size:26px;
+    font-weight:bold;
+  }
+  .situation {
+    display:block;
+    font-size:26px;
+    font-weight:lighter;
+  }
+  .about-actively {
+    display:flex;
+    align-items: center;
+  }
+  .looking {
+    font-size:18px;
+    font-weight:bold;
+    color:rgb(81, 167, 251);
+  }
+  .about-profile {
+    margin-top:10px;
+    background-color:rgb(81, 167, 251);
+    border-radius:20px 20px 0 0;
+    padding-top:20px;
+    height:100vh;
+    padding-left:20px;
+    padding-right: 20px;
+  }
+
+  .profile-cta {
+    display:flex;
+    column-gap:40px;
+    align-items: center;
+  }
+  .discover {
+    display:block;
+    font-size:18px;
+    color:black;
+  }
+  .discover-cats {
+    color:black;
+    display:block;
+  }
+  .arrows {
+	width: 30px;
+	height: 36px;
+}
+.arrows path {
+	stroke: rgba(0, 0, 0, 0.8);
+	fill: transparent;
+	stroke-width: 1px;	
+	animation: arrow 3s infinite;
+	-webkit-animation: arrow 3s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+.arrows path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+/* ------------------------------------------------------------------------ */
+.profile-intro {
+    margin-top:40px;
+}
+.intro-text {
+    color:black;
+    font-weight:lighter;
+    text-align: justify;
+    display:flex;
+    flex-direction:column;
+}
+.lookingfor{
+    margin-top:40px;
+}

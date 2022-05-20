@@ -1,11 +1,12 @@
 <div id="home">
-    <a href="/about"><app-appli [data]="About"></app-appli></a>
-    <a href="/work"><app-appli [data]="Work"></app-appli></a>
-    <a href="/contact"><app-appli [data]="Contact"></app-appli></a>
+    <a (click)="changePage('/about', About[2])"><app-appli [data]="About"></app-appli></a>
+    <a (click)="changePage('/work', Work[2])"><app-appli [data]="Work"></app-appli></a>
+    <a (click)="changePage('/contact', Contact[2])"><app-appli [data]="Contact"></app-appli></a>
     <a href="https://github.com/paulcalimache" target="_blank">
         <app-appli [data]="Github"></app-appli>
     </a>
     <a href="https://www.linkedin.com/in/paul-calimache/" target="_blank">
         <app-appli [data]="Linkedin"></app-appli>
     </a>
+    <div id="fader"></div>
   </div>

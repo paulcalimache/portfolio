@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent {
 
+  constructor(private route: Router){ };
+
   public About: string[] = ['About', '/assets/Icons/paper.svg', 'rgb(38, 70, 83)'];
   public Contact: string[] = ['Contact', '/assets/Icons/contact-mail-red.svg', 'rgb(177, 221, 241)'];
   public Work: string[] = ['Work', '/assets/Icons/works-box.svg', 'rgb(247, 214, 224)'];
   public Github: string[] = ['Github', '/assets/Icons/github.png', 'black'];
   public Linkedin: string[] = ['Linkedin', '/assets/Icons/LinkedIn.png', 'rgb(0, 127, 188)'];
+
+  public async changePage(page: string, bgcolor: string): Promise<void> {
+
+    await this.animation(bgcolor);
+    this.route.navigateByUrl(page);
+
+  };
+
+  private animation(bgcolor: string) {
+    const fader = document.getElementById('fader')!;
+  
+    fader.animate([
+      {width: '5%', height: '5%', borderRadius: '50%', backgroundColor: bgcolor},
+      {width: '60%', height: '60%', borderRadius: '50%', backgroundColor: bgcolor},
+      {width: '100%', height: '100%', borderRadius: '0', backgroundColor: bgcolor }
+    ], {
+    duration: 750,
+    fill: "forwards",
+    }
+    );
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve('resolved');
+      }, 1500);
+    });
+
+  }
 }

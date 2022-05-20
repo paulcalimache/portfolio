@@ -11,4 +11,14 @@
 
 a {
   margin-top:40px;
+  font-family: Helvetica, Arial;
+}
+
+#fader {
+  position:absolute;
+  background-color: black;
+  left:50%;
+  top:50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
