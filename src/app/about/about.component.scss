@@ -45,7 +45,6 @@
     background-color:rgb(81, 167, 251);
     border-radius:20px 20px 0 0;
     padding-top:20px;
-    height:100vh;
     padding-left:20px;
     padding-right: 20px;
   }
@@ -103,7 +102,6 @@
 	animation-delay:0s;
 	-webkit-animation-delay:0s; /* Safari 和 Chrome */
 }
-/* ------------------------------------------------------------------------ */
 .profile-intro {
     margin-top:40px;
 }
@@ -116,4 +114,49 @@
 }
 .lookingfor{
     margin-top:40px;
+}
+
+.timeline {
+  width:100%;
+  display: flex;
+  column-gap: 10px;
+  .t-date {
+    min-width: 50px;
+    width:50px;
+    font-weight: bold;
+  }
+  .t-path {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .t-dot {
+      width:15px;
+      height:15px;
+      border-radius: 50%;
+      background-color: black;
+    }
+    .t-line {
+      height:100%;
+      width:2px;
+      background-color: black;
+    }
+  }
+  .t-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    .t-title {
+      font-weight: bold;
+      font-size:16px;
+    }
+  }
+}
+.t-preline {
+  margin-left:66.5px;
+  height:30px;
+  width:2px;
+  background-color: black;
+}
+.and {
+  margin:10px 0px;
 }

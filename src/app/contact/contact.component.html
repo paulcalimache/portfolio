@@ -2,13 +2,13 @@
     <div class="contact-header">
         <ng-lottie [options]="options" width="250px" height="200px"></ng-lottie>
     </div>
-    <form name="contact" method="POST" data-netlify="true">
+    <form action="https://formsubmit.co/33edaec82ac82f75c2bb6eef96e5589f" method="POST">
         <div class="contact-body">
         <div class="contact-row"><span class="label">TO:</span><span class="input">paul.calimache@gmail.com</span></div>
-        <div class="contact-row"><label for="email">FROM:</label><input type="email" id="email" name="email"></div>
-        <div class="contact-row"><label for="subject">SUBJECT:</label><input type="text" id="subject" name="subject"></div>
+        <div class="contact-row"><label for="email">FROM:</label><input type="email" id="email" name="email" required></div>
+        <div class="contact-row"><label for="subject">SUBJECT:</label><input type="text" id="subject" name="subject" required></div>
         <div class="contact-row"><label for="subject">MESSAGE:</label></div>
-        <textarea type="email" id="email" name="email"></textarea>
+        <textarea type="text" id="email" name="message" required></textarea>
         </div>
         <button id="submit" type="submit"><img src="/assets/Icons/paper-plane.png" id="submit-icon" width="80%"/></button>
         <div class="submit-circle"></div>

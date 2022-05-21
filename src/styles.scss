@@ -14,3 +14,14 @@ body {
   a::after {
     text-decoration: none;
   }
+
+  * {
+    font-family: Helvetica, sans-serif;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+  .center {
+    text-align: center;
+  }
