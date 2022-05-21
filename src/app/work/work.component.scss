@@ -1,0 +1,40 @@
+.work {
+    width:100%;
+    height:100%;
+    background-color: rgb(247, 214, 224);
+    overflow: hidden;
+    .w-item {
+        display: flex;
+        justify-content: space-between;
+        margin:0px  20px;
+        padding: 10px 0px;
+        border-bottom:1px black solid;
+        column-gap: 20px;
+        .w-left {
+            display: flex;
+            column-gap: 10px;
+            .w-preview {
+                display: flex;
+                flex-direction: column;
+                font-size: 14px;
+                .w-title {
+                    font-size: 20px;
+                }
+            }
+            .w-icon {
+                width:50px;
+            }
+        }
+        .w-more {
+            font-size: 32px;
+            display: flex;
+            align-items: center;
+            .more-clic {
+                color:black;
+            }
+            .more-clic:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
