@@ -1,5 +1,14 @@
 #about {
-    background:white;
+    background:rgb(38, 70, 83);
+    span, h1, h2, h3 {
+      color: rgb(38, 70, 83);
+    }
+  }
+  .bf {
+      color: rgb(38, 70, 83);
+  }
+  .bc {
+    color:rgb(81, 167, 251);
   }
   .about-image {
     position:sticky;
@@ -7,7 +16,7 @@
     width:100%;
     padding-top:20px;
     z-index:0;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
   }
   #about-body {
     position: relative;
@@ -42,10 +51,8 @@
     color:rgb(81, 167, 251);
   }
   .about-profile {
-    margin-top:10px;
-    background-color:rgb(81, 167, 251);
     border-radius:20px 20px 0 0;
-    padding-top:20px;
+    padding-top:10px;
     padding-left:20px;
     padding-right: 20px;
   }
@@ -54,6 +61,11 @@
     display:flex;
     column-gap:40px;
     align-items: center;
+    div {
+      display: flex;
+      flex-direction: column;
+      row-gap:5px;
+    }
   }
   .discover {
     display:block;
@@ -69,7 +81,7 @@
 	height: 36px;
 }
 .arrows path {
-	stroke: rgba(0, 0, 0, 0.8);
+	stroke: rgb(81, 167, 251);
 	fill: transparent;
 	stroke-width: 1px;	
 	animation: arrow 3s infinite;
@@ -114,9 +126,16 @@
     flex-direction:column;
 }
 .lookingfor{
-    margin-top:40px;
+    margin-top:20px;
 }
 
+.cursus {
+  margin-top:50px;
+  margin-bottom:50px;
+  h2 {
+    margin-bottom:40px;
+  }
+}
 .timeline {
   width:100%;
   display: flex;
@@ -125,6 +144,7 @@
     min-width: 50px;
     width:50px;
     font-weight: bold;
+    color:rgb(38, 70, 83);
   }
   .t-path {
     display: flex;
@@ -134,12 +154,12 @@
       width:15px;
       height:15px;
       border-radius: 50%;
-      background-color: black;
+      background-color: rgb(38, 70, 83);
     }
     .t-line {
       height:100%;
       width:2px;
-      background-color: black;
+      background-color: rgb(38, 70, 83);
     }
   }
   .t-text {
@@ -168,6 +188,7 @@
   row-gap:20px;
   justify-items:center;
   font-size: 14px;
+  padding-bottom: 30px;
   .skill {
     display: flex;
     flex-direction: column;

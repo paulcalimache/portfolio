@@ -10,9 +10,11 @@ body {
 
   a {
     text-decoration: none;
+    color:inherit;
   }
   a::after {
     text-decoration: none;
+    color:inherit;
   }
 
   * {

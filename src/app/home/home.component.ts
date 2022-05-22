@@ -38,7 +38,7 @@ export class HomeComponent {
     return new Promise(resolve => {
       setTimeout(() => {
         resolve('resolved');
-      }, 1500);
+      }, 1000);
     });
 
   }

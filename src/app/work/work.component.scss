@@ -3,6 +3,10 @@
     height:100%;
     background-color: rgb(247, 214, 224);
     overflow: hidden;
+    h1 {
+        text-align:center;
+        margin-top:40px;
+    }
     .w-item {
         display: flex;
         justify-content: space-between;
@@ -17,8 +21,16 @@
                 display: flex;
                 flex-direction: column;
                 font-size: 14px;
+                row-gap:5px;
                 .w-title {
                     font-size: 20px;
+                }
+                .w-tag {
+                    display:flex;
+                    column-gap:10px;
+                    span {
+                        border-bottom:1px black solid;
+                    }
                 }
             }
             .w-icon {
