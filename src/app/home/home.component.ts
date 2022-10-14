@@ -15,6 +15,7 @@ export class HomeComponent {
   public Work: string[] = ['Work', '/assets/Icons/works-box.svg', 'rgb(247, 214, 224)'];
   public Github: string[] = ['Github', '/assets/Icons/github.png', 'black'];
   public Linkedin: string[] = ['Linkedin', '/assets/Icons/LinkedIn.png', 'rgb(0, 127, 188)'];
+  public Settings: string[] = ['Settings', '/assets/Icons/settings.svg', 'rgb(150, 150, 150)'];
 
   public async changePage(page: string, bgcolor: string): Promise<void> {
 
