@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { bufferToggle } from 'rxjs';
+import { WallpaperService } from '@services/wallpaper.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,14 @@ import { bufferToggle } from 'rxjs';
 })
 export class AppComponent {
 
-  constructor(private route: Router) { }
+  constructor(private route: Router, private wpService: WallpaperService) {
+    document.body.style.backgroundColor = this.wpService.activeWallpaper.backgroundColor;
+    this.wpService.wallpaperObservable.subscribe({
+      next: () => {
+        document.body.style.backgroundColor = this.wpService.activeWallpaper.backgroundColor;
+      }
+    })
+  }
   
   public title: string = 'portfolio';
 

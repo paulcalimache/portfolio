@@ -9,6 +9,11 @@
     row-gap:20px;
     mat-icon {
         transform:scale(2);
+        color:lightgray;
+    }
+    h1 {
+        color:lightgray;
+        margin:0;
     }
 }
 
@@ -16,19 +21,14 @@
     width:80%;
     height:70%;
     border-radius:30px;
-    display: flex;
-    justify-content:flex-end;
     :hover {
         cursor:pointer;
-        transform:scale(1.05);
+        border:2px white solid;
     }
     .bg-image {
         border-radius:30px;
-    }
-    .iconActive {
-        position:absolute;
-        color:rgb(1, 160, 1);
-        align-self: flex-end;
+        width:100%;
+        height:100%;
     }
 }
 

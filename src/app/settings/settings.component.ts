@@ -1,47 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { IWallpaper } from '@models/IWallpaper';
+import { WallpaperService } from '@services/wallpaper.service';
 
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.scss']
 })
-export class SettingsComponent implements OnInit {
+export class SettingsComponent {
 
-  public readonly BG_COLOR: string = 'rgb(150, 150, 150)';
+  public readonly BG_COLOR: string = 'rgb(52, 52, 52)';
 
-  public get Background(): IBackground {
-    return this.background;
-  }
-  private background: IBackground = {path: "/assets/wallpaper/STARRY_SKY.jpg", isActive: true};
+  public WallpaperList: IWallpaper[];
+  public Index: number = 0;
 
-  private backgroundList: IBackground[] = [
-    {path: "/assets/wallpaper/STARRY_SKY.jpg", isActive: true},
-    {path: "/assets/wallpaper/LOFI DOGGIE.jpg", isActive: false},
-    {path: "/assets/wallpaper/PLANTAE SUMMER RELAX.jpg", isActive: false},
-    {path: "/assets/wallpaper/POOL_DAY_QUEER_BEAR.jpg", isActive: false},
-  ]
-
-  ngOnInit(): void {
-    // find actual background
+  constructor(private wpService: WallpaperService) {
+    this.WallpaperList = this.wpService.wallpaperList;
   }
 
-  public bgNext(bg: IBackground) {
-    let bgIndex: number = this.backgroundList.findIndex(i => i.path === bg.path);
-    console.log("_______DEBUG_______", bgIndex)
-    if (bgIndex !== this.backgroundList.length-1){
-      this.background = this.backgroundList[bgIndex+1];
+  public selectWallpaper(wp: IWallpaper): void {
+    this.wpService.activeWallpaper = wp;
+  }
+  public wpNext(): void {
+    if(this.Index < this.WallpaperList.length-1){
+      this.Index++;
     }
   }
-  public bgPrevious(bg: IBackground) {
-    let bgIndex: number = this.backgroundList.findIndex(i => i.path === bg.path);
-    if (bgIndex !== 0){
-      this.background = this.backgroundList[bgIndex-1];
+  public wpPrevious(): void {
+    if(this.Index > 0){
+      this.Index--;
     }
   }
+  public isActiveWallpaper(wp: IWallpaper): string {
+    return wp === this.wpService.activeWallpaper ? '2px white solid' : '';
+  }
 
-}
-
-export interface IBackground {
-  path: string;
-  isActive: boolean;
 }
