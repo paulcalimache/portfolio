@@ -12,7 +12,7 @@ import { WorkComponent } from './work/work.component';
 import { AppliComponent } from './home/appli/appli.component';
 import { SettingsComponent } from './settings/settings.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 
 export function playerFactory() {
   return player;

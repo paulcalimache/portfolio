@@ -23,7 +23,7 @@
     border-radius:30px;
     :hover {
         cursor:pointer;
-        border:2px white solid;
+        border:3px white dashed;
     }
     .bg-image {
         border-radius:30px;
@@ -38,4 +38,9 @@
     .bg-previous:hover, .bg-next:hover {
         cursor:pointer;
     }
+}
+
+.text-info {
+    color:lightgreen;
+    font-weight: bold;
 }

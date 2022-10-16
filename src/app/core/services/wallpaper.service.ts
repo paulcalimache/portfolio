@@ -18,8 +18,8 @@ export class WallpaperService {
   }
   private _wallpaperList: IWallpaper[] = [
     {path: "/assets/wallpaper/STARRY_SKY.jpg", backgroundColor: 'rgb(18,29,37)'},
-    {path: "/assets/wallpaper/LOFI_DOGGIE.jpg", backgroundColor: ''},
-    {path: "/assets/wallpaper/PLANTAE_SUMMER_RELAX.jpg", backgroundColor: ''},
+    {path: "/assets/wallpaper/LOFI_DOGGIE.jpg", backgroundColor: 'rgb(0,177,184)'},
+    {path: "/assets/wallpaper/PLANTAE_SUMMER_RELAX.jpg", backgroundColor: 'rgb(224,214,201)'},
     {path: "/assets/wallpaper/POOL_DAY_QUEER_BEAR.jpg", backgroundColor: 'rgb(217, 201, 191)'},
   ];
 
