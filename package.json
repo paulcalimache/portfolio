@@ -20,7 +20,6 @@
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
-    "angular-responsive-carousel": "^2.1.2",
     "lottie-web": "^5.9.4",
     "ngx-lottie": "^8.2.0",
     "rxjs": "~7.4.0",
@@ -28,7 +27,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.0.3",
+    "@angular-devkit/build-angular": "^13.3.9",
     "@angular/cli": "~13.0.3",
     "@angular/compiler-cli": "~13.0.0",
     "@types/jasmine": "~3.10.0",
