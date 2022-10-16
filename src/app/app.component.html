@@ -1,5 +1,5 @@
 <main id="main">
   <div id="notch"></div>
-  <a id="backHome" href="/" *ngIf="!IsHomePage"><img src="https://www.svgrepo.com/show/77532/left-arrow-sketch.svg" width="40" height="40"></a>
+  <a id="backHome" [routerLink]="['/']" *ngIf="!IsHomePage"><img src="https://www.svgrepo.com/show/77532/left-arrow-sketch.svg" width="40" height="40"></a>
   <router-outlet></router-outlet>
 </main>

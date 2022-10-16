@@ -5,7 +5,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(217, 201, 191);
+    //background-color: rgb(217, 201, 191);
+    //background-color: rgb(18,29,37);
   }
 
   a {
@@ -27,3 +28,5 @@ body {
   .center {
     text-align: center;
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
