@@ -1,5 +1,14 @@
 <main id="main">
-  <div id="notch"></div>
+  <div id="top-bar">
+    <div class="top-bar-left">
+      <span class="date">{{Date}}</span>
+    </div>
+    <div id="notch"></div>
+    <div class="top-bar-right">
+      <mat-icon>wifi</mat-icon>
+      <mat-icon>battery_charging_full</mat-icon>
+    </div>
+  </div>
   <a id="backHome" [routerLink]="['/']" *ngIf="!IsHomePage"><img src="https://www.svgrepo.com/show/77532/left-arrow-sketch.svg" width="40" height="40"></a>
   <router-outlet></router-outlet>
 </main>

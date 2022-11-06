@@ -9,6 +9,10 @@ import { WallpaperService } from '@services/wallpaper.service';
 })
 export class AppComponent {
 
+  public get Date(): string {
+    return new Date().getHours()+ ':' + new Date().getMinutes()
+  }
+
   constructor(private route: Router, private wpService: WallpaperService) {
     document.body.style.backgroundColor = this.wpService.activeWallpaper.backgroundColor;
     this.wpService.wallpaperObservable.subscribe({
