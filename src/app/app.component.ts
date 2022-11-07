@@ -10,7 +10,11 @@ import { WallpaperService } from '@services/wallpaper.service';
 export class AppComponent {
 
   public get Date(): string {
-    return new Date().getHours()+ ':' + new Date().getMinutes()
+    var minutes = new Date().getMinutes();
+    if(minutes <= 9) {
+      return new Date().getHours()+ ':' + '0' + minutes;
+    }
+    return new Date().getHours()+ ':' + minutes;
   }
 
   constructor(private route: Router, private wpService: WallpaperService) {
