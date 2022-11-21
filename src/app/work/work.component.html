@@ -1,58 +1,7 @@
 <div class="work">
     <h1>Works</h1>
-    <div class="w-item">
-        <div class="w-left">
-            <img class="w-icon" src="/assets/Icons/resume.svg">
-            <div class="w-preview">
-                <span class="w-title">Website portfolio</span>
-                <span>I made a previous portfolio website</span>
-                <div class="w-tag"></div>
-            </div>
-        </div>
-        <!--<div class="w-more">
-            <a href="" class="more-clic">+</a>
-        </div>-->
-    </div>
-    <!---->
-    <div class="w-item">
-        <div class="w-left">
-            <img class="w-icon" src="https://www.svgrepo.com/show/40567/web-interface.svg">
-            <div class="w-preview">
-                <span class="w-title">[School] Web application</span>
-                <span>Realization of an internship research platform for student</span>
-                <div class="w-tag"><span>#HTML</span><span>#CSS</span><span>#JavaScript</span><span>#PHP</span></div>
-            </div>
-        </div>
-        <!--<div class="w-more">
-            <a href="" class="more-clic">+</a>
-        </div>-->
-    </div>
-    <!---->
-    <div class="w-item">
-        <div class="w-left">
-            <img class="w-icon" src="https://www.svgrepo.com/show/339776/application-web.svg">
-            <div class="w-preview">
-                <span class="w-title">[School] Desktop application</span>
-                <span>Realization of a file management application</span>
-                <div class="w-tag"><span>#.NET</span><span>#C#</span><span>#OOP</span></div>
-            </div>
-        </div>
-        <div class="w-more">
-            <a href="https://github.com/malmax0/-EasySave/" class="more-clic">+</a>
-        </div>
-    </div>
-    <!---->
-    <div class="w-item">
-        <div class="w-left">
-            <img class="w-icon" src="https://www.svgrepo.com/show/36341/database.svg">
-            <div class="w-preview">
-                <span class="w-title">[School] Database project</span>
-                <span>Creation of a MySQL database</span>
-                <div class="w-tag"><span>#MySQL</span><span>#ER Diagrams</span></div>
-            </div>
-        </div>
-        <!--<div class="w-more">
-            <a href="" class="more-clic">+</a>
-        </div>-->
+    <div *ngFor="let work of WorkList">
+        <app-work-item [WorkItem]="work">
+        </app-work-item>
     </div>
 </div>

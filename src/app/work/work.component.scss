@@ -1,52 +1,12 @@
 .work {
-    width:100%;
-    height:100%;
+    // width:100%;
+    min-height: 100%;
     background-color: rgb(247, 214, 224);
-    overflow: hidden;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
     h1 {
         text-align:center;
         margin-top:40px;
-    }
-    .w-item {
-        display: flex;
-        justify-content: space-between;
-        margin:0px  20px;
-        padding: 10px 0px;
-        border-bottom:1px black solid;
-        column-gap: 20px;
-        .w-left {
-            display: flex;
-            column-gap: 10px;
-            .w-preview {
-                display: flex;
-                flex-direction: column;
-                font-size: 14px;
-                row-gap:5px;
-                .w-title {
-                    font-size: 20px;
-                }
-                .w-tag {
-                    display:flex;
-                    column-gap:10px;
-                    span {
-                        border-bottom:1px black solid;
-                    }
-                }
-            }
-            .w-icon {
-                width:50px;
-            }
-        }
-        .w-more {
-            font-size: 32px;
-            display: flex;
-            align-items: center;
-            .more-clic {
-                color:black;
-            }
-            .more-clic:hover {
-                cursor: pointer;
-            }
-        }
     }
 }

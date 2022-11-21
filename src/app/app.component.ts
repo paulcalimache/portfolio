@@ -10,7 +10,11 @@ import { WallpaperService } from '@services/wallpaper.service';
 export class AppComponent {
 
   public get Date(): string {
-    return new Date().getHours()+ ':' + new Date().getMinutes()
+    var minutes = new Date().getMinutes();
+    if(minutes <= 9) {
+      return new Date().getHours()+ ':' + '0' + minutes;
+    }
+    return new Date().getHours()+ ':' + minutes;
   }
 
   constructor(private route: Router, private wpService: WallpaperService) {
@@ -18,6 +22,13 @@ export class AppComponent {
     this.wpService.wallpaperObservable.subscribe({
       next: () => {
         document.body.style.backgroundColor = this.wpService.activeWallpaper.backgroundColor;
+        // provisional implementation
+        if (this.wpService.activeWallpaper.backgroundColor !== 'rgb(18,29,37)') {
+          console.log("test");
+          document.getElementById('signature')!.style.color = 'black';
+        } else {
+          document.getElementById('signature')!.style.color = 'lightgrey';
+        }
       }
     })
   }
