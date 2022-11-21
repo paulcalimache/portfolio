@@ -26,13 +26,15 @@ export class WorkComponent implements OnInit {
     let schoolWebApp: Work = {
       name: '[School] Web application',
       iconPath: 'https://www.svgrepo.com/show/40567/web-interface.svg',
-      shortDesc: 'Realization of an internship research platform for student',
+      shortDesc: 'Realization of an internship research platform for student.',
       tag: ['#HTML', '#CSS', '#Javascript', '#Php']
     };
     let schoolCSharpApp: Work = {
       name: '[School] Desktop application',
       iconPath: 'https://www.svgrepo.com/show/339776/application-web.svg',
-      shortDesc: 'Realization of a file management application',
+      shortDesc: 'Realization of a file management application.',
+      moreDesc: 'Desktop application created in C# with the microsoft framework .NET and WPF (Windows Presentation Foundation) to made the graphical interface.'
+      + 'This project allowed to put into practice object-oriented programming and implement an application with the Model View Controller pattern.',
       tag: ['#.NET', '#C#', '#OOP', '#MVC'],
       link: 'https://github.com/malmax0/-EasySave/'
     };
@@ -42,7 +44,7 @@ export class WorkComponent implements OnInit {
       shortDesc: 'Creation & management of a MySQL database',
       tag: ['#MySQL', '#ER Diagrams'],
     };
-    this.workList.push(portfolio, schoolWebApp, schoolCSharpApp, schoolDB);
+    this.workList.push(portfolio, schoolCSharpApp, schoolWebApp, schoolDB);
   }
 
 }

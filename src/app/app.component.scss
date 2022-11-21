@@ -55,6 +55,13 @@
     text-decoration: none;
   }
 
+  #signature {
+    position: absolute;
+    right:20px;
+    bottom:10px;
+    color:lightgrey;
+  }
+
   @media screen and (max-width: 400px) {
     main {
       width:100vw;

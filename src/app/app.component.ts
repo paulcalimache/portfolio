@@ -22,6 +22,13 @@ export class AppComponent {
     this.wpService.wallpaperObservable.subscribe({
       next: () => {
         document.body.style.backgroundColor = this.wpService.activeWallpaper.backgroundColor;
+        // provisional implementation
+        if (this.wpService.activeWallpaper.backgroundColor !== 'rgb(18,29,37)') {
+          console.log("test");
+          document.getElementById('signature')!.style.color = 'black';
+        } else {
+          document.getElementById('signature')!.style.color = 'lightgrey';
+        }
       }
     })
   }
