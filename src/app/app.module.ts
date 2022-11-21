@@ -13,6 +13,7 @@ import { AppliComponent } from './home/appli/appli.component';
 import { SettingsComponent } from './settings/settings.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { WorkItemComponent } from './work/work-item/work-item.component';
 
 export function playerFactory() {
   return player;
@@ -27,6 +28,7 @@ export function playerFactory() {
     WorkComponent,
     AppliComponent,
     SettingsComponent,
+    WorkItemComponent,
   ],
   imports: [
     BrowserModule,

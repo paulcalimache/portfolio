@@ -1,0 +1,23 @@
+<div class="w-item">
+    <img class="w-icon" src="{{ WorkItem?.iconPath }}">
+    <div class="item-main">
+        <span class="w-title">{{ WorkItem?.name }}</span>
+        <span>{{ WorkItem?.shortDesc }}
+            <span class="item-rmore" *ngIf="ExtendDesc">
+                <br>
+                {{ WorkItem?.moreDesc }}
+            </span>
+        </span>
+        <div *ngIf="WorkItem?.moreDesc" class="action-rmore" (click)="toggleDescription()">
+            <span>Read </span><span *ngIf="!ExtendDesc">more &#8628;</span><span *ngIf="ExtendDesc">less &#11023;</span>
+        </div>
+        <div class="w-tag">
+            <span *ngFor="let tag of WorkItem?.tag">
+                {{ tag }}
+            </span>
+        </div>
+    </div>
+    <div *ngIf="WorkItem?.link" class="w-action">
+        <a href="{{WorkItem?.link}}" class="action-clic"><mat-icon>open_in_new</mat-icon></a>
+    </div>
+</div>

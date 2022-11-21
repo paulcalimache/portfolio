@@ -1,55 +1,7 @@
 <div class="work">
     <h1>Works</h1>
-    <div class="w-item">
-        <img class="w-icon" src="/assets/Icons/resume.svg">
-        <div class="item-main">
-            <span class="w-title">Website portfolio</span>
-            <span>I created this portfolio website from scratch using Angular framework.
-                <span class="item-rmore" *ngIf=""> All the code is publish on a public github repository.
-                I'm using netlify for link the github repo and automatically host/deploy the application on the web.
-                </span>
-            </span>
-            <span>read more ...</span>
-            <div class="w-tag"><span>#HTML</span><span>#CSS</span><span>#Angular</span><span>#Typescript</span><span>#Git</span></div>
-        </div>
-        <div class="w-action">
-            <a href="https://github.com/paulcalimache/portfolio" class="action-clic"><mat-icon>open_in_new</mat-icon></a>
-        </div>
-    </div>
-    <!---->
-    <div class="w-item">
-        <img class="w-icon" src="https://www.svgrepo.com/show/40567/web-interface.svg">
-        <div class="item-main">
-            <span class="w-title">[School] Web application</span>
-            <span>Realization of an internship research platform for student</span>
-            <div class="w-tag"><span>#HTML</span><span>#CSS</span><span>#JavaScript</span><span>#PHP</span></div>
-        </div>
-        <!--<div class="w-action">
-            <a href="" class="action-clic">+</a>
-        </div>-->
-    </div>
-    <!---->
-    <div class="w-item">
-        <img class="w-icon" src="https://www.svgrepo.com/show/339776/application-web.svg">
-        <div class="item-main">
-            <span class="w-title">[School] Desktop application</span>
-            <span>Realization of a file management application</span>
-            <div class="w-tag"><span>#.NET</span><span>#C#</span><span>#OOP</span></div>
-        </div>
-        <div class="w-action">
-            <a href="https://github.com/malmax0/-EasySave/" class="action-clic"><mat-icon>open_in_new</mat-icon></a>
-        </div>
-    </div>
-    <!---->
-    <div class="w-item">
-        <img class="w-icon" src="https://www.svgrepo.com/show/36341/database.svg">
-        <div class="item-main">
-            <span class="w-title">[School] Database project</span>
-            <span>Creation of a MySQL database</span>
-            <div class="w-tag"><span>#MySQL</span><span>#ER Diagrams</span></div>
-        </div>
-        <!--<div class="w-action">
-            <a href="" class="action-clic">+</a>
-        </div>-->
+    <div *ngFor="let work of WorkList">
+        <app-work-item [WorkItem]="work">
+        </app-work-item>
     </div>
 </div>
