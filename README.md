@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3c70d843-f6f0-4ce7-8f7f-4b8931c0f377/deploy-status)](https://app.netlify.com/sites/paulcalimache/deploys)
 # Portfolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
