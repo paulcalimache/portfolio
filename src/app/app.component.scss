@@ -6,6 +6,7 @@
     position:relative;
     overflow-x: hidden;
     overflow-y: scroll;
+    scrollbar-width: none;
   }
   main::-webkit-scrollbar {
     display: none;
@@ -62,7 +63,13 @@
     color:lightgrey;
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-height: 700px) {
+    main {
+      height:550px;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
     main {
       width:100vw;
       height:100vh;
