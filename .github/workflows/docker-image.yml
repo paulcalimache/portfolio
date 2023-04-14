@@ -16,5 +16,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag pcalimache/portfolio:$(date +%s)
+    - name: Login to docker hub repo
+      run: docker login --username=pcalimache --password=$DOCKER_HUB_PASSWORD
     - name: Push Docker image
       run: docker push pcalimache/portfolio:$(date +%s)
