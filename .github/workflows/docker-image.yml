@@ -24,7 +24,8 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
       -
         name: Build and push
-        uses: docker/build-push-action@v4
-        with:
-          push: true
-          tags: pcalimache/portfolio:latest
+        run: |
+          docker buildx build \
+            --platform linux/arm64,linux/amd64\
+            --tag pcalimache/portfolio:latest \
+            --push .
