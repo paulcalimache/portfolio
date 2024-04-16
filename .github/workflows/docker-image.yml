@@ -22,13 +22,10 @@ jobs:
         with:
           username: pcalimache
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-      - name: test
-        run: ls
       -
         name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: .
           platforms: linux/amd64,linux/arm64
           push: true
           tags: pcalimache/portfolio:latest
